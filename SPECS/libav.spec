@@ -28,7 +28,6 @@ Requires:       %{name} = %{version}
 Libav is a complete, cross-platform solution to decode, encode, record, convert and stream audio and video.
 
 %prep
-%setup -q -n %{name}-%{version}/%{name}
 
 ./configure --prefix=/usr --libdir=%{_libdir} --disable-debug --enable-shared --enable-pic \
   --disable-static --enable-sram --disable-yasm \
@@ -56,6 +55,7 @@ Libav is a complete, cross-platform solution to decode, encode, record, convert 
   --enable-demuxer=pcm_s32be --enable-demuxer=pcm_s32le --enable-demuxer=pcm_s8 \
   --enable-demuxer=pcm_u16be --enable-demuxer=pcm_u16le --enable-demuxer=pcm_u24be \
   --enable-demuxer=pcm_u24le
+%setup -q
 
 %build
 make %{?jobs:-j%jobs}
