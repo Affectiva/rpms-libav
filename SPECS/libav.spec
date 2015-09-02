@@ -1,6 +1,6 @@
 Name:           libav
 Version:        11.1
-Release:        1.affectiva%{?dist}
+Release:        2.affectiva%{?dist}
 Summary:        Libav video encoding and decoding library
 Group:          Productivity/Multimedia/Video/Editors and Convertors
 Url:            http://libav.org
