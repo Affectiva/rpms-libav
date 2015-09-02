@@ -53,15 +53,19 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(-,root,root)
 %{_libdir}/*.so
+%{_libdir}/*.a
 %{_includedir}/libavcodec/*.h
 %{_includedir}/libavfilter/*.h
 %{_includedir}/libavformat/*.h
 %{_includedir}/libavutil/*.h
 %{_includedir}/libswscale/*.h
 %{_includedir}/libavresample/*.h
+%{_includedir}/libavdevice/*.h
 %{_libdir}/pkgconfig/*.pc
 
 %files tools
 %defattr(-,root,root)
 %{_bindir}/avprobe
 %{_bindir}/avconv
+%{_mandir}/man1/avprobe.1*
+%{_mandir}/man1/avconv.1*
