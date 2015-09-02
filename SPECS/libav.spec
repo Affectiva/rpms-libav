@@ -1,6 +1,6 @@
 Name:           libav
 Version:        11.1
-Release:        0.affectiva%{?dist}
+Release:        1.affectiva%{?dist}
 Summary:        Libav video encoding and decoding library
 Group:          Productivity/Multimedia/Video/Editors and Convertors
 Url:            http://libav.org
@@ -10,11 +10,18 @@ License:        LGPL-2.0+
 %description
 Libav is a complete, cross-platform solution to decode, encode, record, convert and stream audio and video.
 
+BuildRequires:	opus-devel
+BuildRequires:	x264-devel
+BuildRequires:	libvpx-devel
+
 %package devel
 Summary:        Development headers and libraries for libav
 Group:          Productivity/Multimedia
 Requires:       %{name} = %{version}
 Requires:       bzip2-devel
+Requires:	opus-devel
+Requires:	x264-devel
+Requires:	libvpx-devel
 
 %description devel
 Libav is a complete, cross-platform solution to decode, encode, record, convert and stream audio and video.
