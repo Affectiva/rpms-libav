@@ -7,12 +7,12 @@ Url:            http://libav.org
 Source:         %{name}-%{version}.tar.gz
 License:        LGPL-2.0+
 
-%description
-Libav is a complete, cross-platform solution to decode, encode, record, convert and stream audio and video.
-
 BuildRequires:	opus-devel
 BuildRequires:	x264-devel
 BuildRequires:	libvpx-devel
+
+%description
+Libav is a complete, cross-platform solution to decode, encode, record, convert and stream audio and video.
 
 %package devel
 Summary:        Development headers and libraries for libav
